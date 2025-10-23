@@ -1,3 +1,223 @@
 body {
-    margin: 0;
+  margin: 0;
+  font-family: "Karla", sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+.container {
+  box-sizing: border-box;
+  width: 550px;
+  height: 550px;
+  background-color: #1f2937;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 50px;
+  border-radius: 10px;
+  position: relative;
+}
+
+/* ---- Theme toggler ---- */
+.mode {
+  width: 40px;
+  cursor: pointer;
+}
+
+.mode-toggler {
+  position: absolute;
+  top: 35px;
+  right: 60px;
+}
+
+/* Styling of the icons of theme  */
+#light {
+  fill: #fff;
+}
+
+#light:hover {
+  filter: drop-shadow(0 0 10px #fff);
+}
+
+#dark:hover {
+  filter: drop-shadow(0 0 10px #000);
+}
+
+.hide {
+  display: none;
+}
+
+/* ---- Typography ---- */
+h1 {
+  font-size: 40px;
+  line-height: 40px;
+  margin: 0;
+}
+
+.green-text {
+  display: block;
+  color: #34d399;
+}
+
+.sub-header {
+  font-size: 20px;
+  color: #d5d4d8;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+/* ---- Options styling ---- */
+/* Lenghts option */
+.lenghts-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+#lenght {
+  width: 20px;
+  text-align: center;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 5px;
+  background-color: #273549;
+  color: #55f991;
+}
+/* Removing arrows from the input */
+#lenght::-webkit-outer-spin-button,
+#lenght::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Radio buttons and labels styling  */
+.radio-img {
+  width: 25px;
+  height: 25px;
+  fill: #fff;
+  padding: 0;
+}
+
+.charter-option {
+  display: inline-block;
+  padding: 2px 3px;
+  border-radius: 20px;
+  position: relative;
+  border: 2px solid #fff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.charter-option label {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  color: #95a5a6;
+  padding: 10px 15px;
+  z-index: 2;
+  margin: 0;
+  cursor: pointer;
+}
+
+.charter-option input {
+  position: absolute;
+  z-index: 3;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Creating green circle around the labels with default state*/
+.charter-option span {
+  height: 29px;
+  width: 29px;
+  line-height: 21px;
+  border-radius: 50%;
+  border: 3px solid #27ae60;
+  display: block;
+  position: absolute;
+  left: 72px;
+  top: 7px;
+  transition: all 0.3s ease-in-out;
+}
+/* Moving the circle around selection  */
+.charter-option input[value="symbols"]:checked ~ span {
+  left: 13px;
+  top: 7px;
+}
+
+.charter-option input[value="all"]:checked ~ span {
+  left: 72px;
+}
+
+.charter-option input[value="number"]:checked ~ span {
+  left: 131px;
+}
+
+/* ---- Styling Generating button ---- */
+.btn {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  width: 190px;
+  height: 40px;
+  background-color: #10b981;
+  border: none;
+  border-radius: 6px;
+  margin-bottom: 35px;
+  padding: 0;
+  cursor: pointer;
+  transition: ease-in-out 0.2s;
+}
+
+.btn:hover {
+  color: #000;
+}
+
+/* ---- Styling Breaking line between button of generation and output ---- */
+.line {
+  display: inline-block;
+  width: 100%;
+  height: 1px;
+  background-color: #2f3e53;
+  margin-bottom: 35px;
+}
+
+/* ---- Styling output paragraphs ----*/
+.output-password {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pass {
+  background-color: #273549;
+  width: 210px;
+  height: 40px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pass p {
+  margin: 0;
+  color: #55f991;
+}
+
+/* ---- Inverting the colors of container, header and radio input icons and border ----*/
+.invert-container {
+  background-color: #ecfdf5;
+  color: #111827;
+}
+
+.invert-header {
+  color: #6b7280;
+}
+
+.invert-img {
+  fill: #000;
+}
+
+.invert-character-option {
+  border: 2px solid #000;
 }
